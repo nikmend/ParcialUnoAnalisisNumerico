@@ -7,6 +7,7 @@ Created on Fri Aug 25 07:49:36 2017
 """
 import math
 
+
 def aproximacionTaylorMetodoUno( valor, orden ):
     
     valorInicial = 0.0
@@ -21,24 +22,19 @@ def aproximacionTaylorMetodoUno( valor, orden ):
     except TypeError:
         print 'Ingrese un numero'
 
-def aproximacionTaylorMetodoDos( valor, orden ):
-     valorInicialDos = 0.0
+def aproximacionTaylorMetodoDos( x ):
      
-     try:
-         for item in xrange( orden ):
-            valorSiguiente = float( (((1**item) * math.exp( valor ))/ math.factorial(item))* (valor**item))
-            valorInicialDos += valorSiguiente
-            
-         return valorInicialDos
+    valor = float (1 - x + (x**2/2) - (x**3/6) + (x**4/24) - (x**5/120) + (x**6/720) - (x**7/5040) + (x**8/40320))
 
-     except TypeError:
-        print 'Ingrese un numero'
+    return valor
             
     
 if __name__ == "__main__":
     
-   aproximacionUno =  aproximacionTaylorMetodoUno( -5,20 )
-   print aproximacionUno
+   e = 0.00673794699085
+   aproximacionUno =  aproximacionTaylorMetodoUno( -5, 9)
+   print aproximacionUno, "error: ", (aproximacionUno-e)
    
-   aproximacionDos =  aproximacionTaylorMetodoDos( -5,9 )
-   print aproximacionDos
+   aproximacionDos =  aproximacionTaylorMetodoDos( 5.0)
+   print aproximacionDos, "error: ", (aproximacionDos-e)
+
