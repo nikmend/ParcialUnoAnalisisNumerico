@@ -1,5 +1,3 @@
 # ParcialUnoAnalisisNumerico
 
-En el cuarto punto se utilizaron dos metodos:
-  1. Representacion e^x en la serie de Taylor
-  2. Se uso el teorema de Taylor 
+En este repositorio se encuentran los ejercicios del primer parcial de la materia de análisis numerico en archivos de Python (.py), y las capturas de pantalla en el archivo de word, en las que se encuentran las correspondientes salidas de cada ejercicio
